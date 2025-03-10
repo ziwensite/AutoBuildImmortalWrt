@@ -92,10 +92,13 @@ jobs:
             echo -e "NO docker"
           fi
 
+      - name: Set release tag timestamp
+        run: echo "RELEASE_TIMESTAMP=$(date +'%Y%m%d%H%M%S')" >> $GITHUB_ENV
+
       - name: Upload ImmortWrt as release assets
         uses: softprops/action-gh-release@v2.2.1
         with:
-          tag_name: Autobuild-x86-64-release-$(date +'%Y%m%d%H%M%S')
+          tag_name: Autobuild-x86-64-release-${{ env.RELEASE_TIMESTAMP }}
           body_path: ${{ github.workspace }}/info.md
           files: |
             ${{ github.workspace }}/*squashfs-combined-efi.img.gz
