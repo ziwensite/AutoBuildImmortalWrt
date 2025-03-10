@@ -43,12 +43,9 @@ PACKAGES="$PACKAGES fdisk"
 PACKAGES="$PACKAGES script-utils"
 PACKAGES="$PACKAGES luci-i18n-samba4-zh-cn"
 #自定义app
-PACKAGES="$PACKAGES luci-app-store"
-PACKAGES="$PACKAGES luci-app-unishare"
 PACKAGES="$PACKAGES luci-app-cloudflared"
 PACKAGES="$PACKAGES luci-app-cifs"
 PACKAGES="$PACKAGES luci-app-v2raya"
-PACKAGES="$PACKAGES luci-app-nekobox"
 
 # 判断是否需要编译 Docker 插件
 if [ "$INCLUDE_DOCKER" = "yes" ]; then
