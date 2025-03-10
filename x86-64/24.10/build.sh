@@ -44,7 +44,8 @@ PACKAGES="$PACKAGES script-utils"
 # PACKAGES="$PACKAGES luci-i18n-samba4-zh-cn"
 #自定义app
 PACKAGES="$PACKAGES luci-app-cloudflared"
-PACKAGES="$PACKAGES luci-app-cifs"
+PACKAGES="$PACKAGES luci-app-cifs-mount"
+PACKAGES="$PACKAGES luci-i18n-cifs-mount-zh-cn"
 PACKAGES="$PACKAGES luci-app-v2raya"
 
 # 判断是否需要编译 Docker 插件
